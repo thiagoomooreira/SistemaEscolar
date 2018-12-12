@@ -38,11 +38,15 @@ if($_POST){
         </div>
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
-            <select name="turma">
-                <option value="" disabled selected>Turma</option>
-                <option value="Turma A">Turma A</option>
-                <option value="Turma B">Turma B</option>
-                <option value="Turma C">Turma C</option>
+            <select name="turma" value="">
+                <optgroup label="Atual">
+                    <option value="">Selecione</option>
+                </optgroup>
+                <optgroup label="Todos">
+                    <option value="Turma A">Turma A</option>
+                    <option value="Turma B">Turma B</option>
+                    <option value="Turma C">Turma C</option>
+                </optgroup>
             </select>
         </div>
         <div class="row col s10">

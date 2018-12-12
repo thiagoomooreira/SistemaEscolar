@@ -37,10 +37,14 @@ if($queryValida){
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
             <select name="serie" value="">
-                <option value="" disabled selected><?php echo($dado['serie']); ?></option>
-                <option value="1° Semestre">1° Semestre</option>
-                <option value="2° Semestre">2° Semestre</option>
-                <option value="3° Semestre">3° Semestre</option>
+                <optgroup label="Atual">
+                    <option value="<?php echo($dado['serie']); ?>"><?php if($dado['serie']!=null){echo($dado['serie']);}else{echo("Selecione");}?></option>
+                </optgroup>
+                <optgroup label="Todos">
+                    <option value="1° Semestre">1° Semestre</option>
+                    <option value="2° Semestre">2° Semestre</option>
+                    <option value="3° Semestre">3° Semestre</option>
+                </optgroup>
             </select>
         </div>
         <div class="row">

@@ -45,7 +45,7 @@ include("../php/read.php");
                         <a class="waves-effect modal-trigger btn grey darken-3" href="AlunoEdit.php?id=<?= $dado['id']?>"><i class="material-icons prefix">create</i></a>
                     </td>
                     <td>
-                        <a class="waves-effect modal-trigger btn red darken-2" href="../php/delete.php?id=<?= $dado['id']?>"><i class="material-icons prefix">delete</i></a>
+                        <a class="waves-effect modal-trigger btn red darken-2" href="../php/delete.php?id=<?= $dado['id']?>&page=aluno"><i class="material-icons prefix">delete</i></a>
                     </td>
                 </tr>
                 <?php }?>

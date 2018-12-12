@@ -36,11 +36,15 @@ if($queryValida){
         </div>
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
-            <select name="turma">
-                <option value="" disabled selected><?php echo($dado['turma']); ?></option>
-                <option value="Turma A">Turma A</option>
-                <option value="Turma B">Turma B</option>
-                <option value="Turma C">Turma C</option>
+            <select name="turma" value="">
+                <optgroup label="Atual">
+                    <option value="<?php echo($dado['turma']); ?>"><?php if($dado['turma']!=null){echo($dado['turma']);}else{echo("Selecione");}?></option>
+                </optgroup>
+                <optgroup label="Todos">
+                    <option value="Turma A">Turma A</option>
+                    <option value="Turma B">Turma B</option>
+                    <option value="Turma C">Turma C</option>
+                </optgroup>
             </select>
         </div>
         <div class="row">
