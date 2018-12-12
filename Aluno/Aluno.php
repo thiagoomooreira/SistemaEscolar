@@ -1,31 +1,22 @@
 <?php
-include ("php/read.php");
+include("../php/read.php");
 ?>
 <html>
 <head>
     <!-- Materialize -->
-    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 
 
 
     <title>Escola</title>
 </head>
 <body>
-<nav>
-    <div class="nav-wrapper  grey darken-3">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">Alunos</a></li>
-            <li><a href="#">Professor</a></li>
-            <li><a href="#">Salas</a></li>
-        </ul>
-    </div>
-</nav>
+<?php include("../navbar.php"); ?>
 
 
 <div class="div-lista ">
@@ -50,10 +41,10 @@ include ("php/read.php");
                     <td><?php echo $dado["nome"];?></td>
                     <td><?php  echo $dado["serie"];?></td>
                     <td>
-                        <a class="waves-effect modal-trigger btn grey darken-3" href='AlunoEdit.php?id=<?= $dado['id'] ?>'><i class="material-icons prefix">create</i></a>
+                        <a class="waves-effect modal-trigger btn grey darken-3" href="AlunoEdit.php?id=<?= $dado['id']?>"><i class="material-icons prefix">create</i></a>
                     </td>
                     <td>
-                        <a class="waves-effect modal-trigger btn red darken-2" href="php/delete.php?id=<?= $dado['id']?>"><i class="material-icons prefix">delete</i></a>
+                        <a class="waves-effect modal-trigger btn red darken-2" href="../php/delete.php?id=<?= $dado['id']?>"><i class="material-icons prefix">delete</i></a>
                     </td>
                 </tr>
                 <?php }?>
@@ -65,8 +56,8 @@ include ("php/read.php");
 
 <!-- Jquery e Script -->
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="materialize/js/materialize.min.js"></script>
-<script src="js/script.js"></script>
+<script src="../materialize/js/materialize.min.js"></script>
+<script src="../js/script.js"></script>
 
 </body>
 
