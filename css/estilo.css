@@ -4,3 +4,12 @@
 .div-lista{
     margin: 5% 10% 0 5%;
 }
+.box{
+    margin-top: 5%;
+    padding: 5% 2.5% 5% 2.5%;
+    width: 40%;
+    height: 60%;
+    border:1px solid #424242 ;
+    border-radius: 5px ;
+    box-shadow: 3px 3px 10px #424242  ;
+}
