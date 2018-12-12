@@ -1,9 +1,9 @@
 <?php
-$page = "aluno";
+$page = "professor";
 include("../php/edit.php");
 
 if($queryValida){
-    echo ("<script>location.href='Aluno.php'</script>");
+    echo ("<script>location.href='Professor.php'</script>");
 }
 
 ?>
@@ -36,17 +36,17 @@ if($queryValida){
         </div>
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
-            <select name="serie" value="">
-                <option value="" disabled selected><?php echo($dado['serie']); ?></option>
-                <option value="1° Semestre">1° Semestre</option>
-                <option value="2° Semestre">2° Semestre</option>
-                <option value="3° Semestre">3° Semestre</option>
+            <select name="turma">
+                <option value="" disabled selected><?php echo($dado['turma']); ?></option>
+                <option value="Turma A">Turma A</option>
+                <option value="Turma B">Turma B</option>
+                <option value="Turma C">Turma C</option>
             </select>
         </div>
         <div class="row">
             <center>
                 <button class="green btn waves-effect waves-light" type="submit" name="action">Adicionar</button>
-                <a href="Aluno.php" class="red darken-1 waves-effect waves-light btn">Cancelar</a>
+                <a href="Professor.php" class="red darken-1 waves-effect waves-light btn">Cancelar</a>
             </center>
         </div>
     </form>

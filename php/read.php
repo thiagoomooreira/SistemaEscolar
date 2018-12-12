@@ -1,5 +1,10 @@
 <?php
 include ("conect/conect.php");
 
-$consulta = "SELECT * FROM Aluno";
+if($page == "professor"){
+    $consulta = "SELECT * FROM Professor";
+
+}elseif ($page == "aluno"){
+    $consulta = "SELECT * FROM Aluno";
+}
 $read = $conn->query($consulta) or die ($mysqli->error);

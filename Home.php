@@ -27,7 +27,7 @@
                 <span class="card-title">Professor</span>
             </div>
             <div class="card-action">
-                <a href="#">Acessar</a>
+                <a href="http://localhost/SistemaEscolar/Professor/Professor.php">Acessar</a>
             </div>
         </div>
     </div>

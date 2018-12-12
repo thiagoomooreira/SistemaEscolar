@@ -1,11 +1,13 @@
 <?php
-$page = "aluno";
-include("../php/edit.php");
 
-if($queryValida){
-    echo ("<script>location.href='Aluno.php'</script>");
+if($_POST){
+    $page = "professor";
+    include("../php/create.php");
+    if($create){
+        echo "<script> location.href='Professor.php';</script>";
+    }
+
 }
-
 ?>
 
 <html>
@@ -30,23 +32,23 @@ if($queryValida){
         <div class="row">
             <div class="input-field col s10">
                 <i class="material-icons prefix">person</i>
-                <input  value="<?php echo($dado['nome']);?>" name="nome" id="icon_prefix" type="text" class="validate">
+                <input  name="nome" id="icon_prefix" type="text" class="validate">
                 <label>Nome Completo</label>
             </div>
         </div>
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
-            <select name="serie" value="">
-                <option value="" disabled selected><?php echo($dado['serie']); ?></option>
-                <option value="1° Semestre">1° Semestre</option>
-                <option value="2° Semestre">2° Semestre</option>
-                <option value="3° Semestre">3° Semestre</option>
+            <select name="turma">
+                <option value="" disabled selected>Turma</option>
+                <option value="Turma A">Turma A</option>
+                <option value="Turma B">Turma B</option>
+                <option value="Turma C">Turma C</option>
             </select>
         </div>
-        <div class="row">
+        <div class="row col s10">
             <center>
                 <button class="green btn waves-effect waves-light" type="submit" name="action">Adicionar</button>
-                <a href="Aluno.php" class="red darken-1 waves-effect waves-light btn">Cancelar</a>
+                <a href="Professor.php" class="red darken-1 waves-effect waves-light btn">Cancelar</a>
             </center>
         </div>
     </form>
@@ -57,7 +59,6 @@ if($queryValida){
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="../materialize/js/materialize.min.js"></script>
 <script src="../js/script.js"></script>
-
 <script>
     $(document).ready(function(){
         $('select').formSelect();

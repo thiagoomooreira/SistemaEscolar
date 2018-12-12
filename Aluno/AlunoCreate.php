@@ -1,6 +1,7 @@
 <?php
 
 if($_POST){
+    $page = "aluno";
     include("../php/create.php");
     if($create){
         echo "<script> location.href='Aluno.php';</script>";
