@@ -10,22 +10,7 @@ if($_POST){
 }
 ?>
 
-<html>
-<head>
-    <!-- Materialize -->
-    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilo.css">
-
-
-
-    <title>Escola</title>
-</head>
-<body>
-<?php include("../navbar.php"); ?>
+<?php include("../Head.php"); ?>
 
 <div class="row box grey lighten-3">
     <form class="col s12" method="post">
@@ -59,14 +44,4 @@ if($_POST){
 </div>
 
 
-<!-- Jquery e Script -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="../materialize/js/materialize.min.js"></script>
-<script src="../js/script.js"></script>
-<script>
-    $(document).ready(function(){
-        $('select').formSelect();
-    });
-</script>
-</body>
-</html>
+<?php include ("../Footer.php");?>
