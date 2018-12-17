@@ -25,7 +25,7 @@ include("../php/read.php");
             <?php while ($dado = $read->fetch_array()){?>
                 <tr>
                     <td><?php echo $dado["nome"];?></td>
-                    <td><?php  echo $dado["turma"];?></td>
+                    <td><?php  echo $dado["nomeSala"];?></td>
                     <td>
                         <a class="waves-effect modal-trigger btn grey darken-3" href="ProfessorEdit.php?id=<?= $dado['id']?>"><i class="material-icons prefix">create</i></a>
                     </td>

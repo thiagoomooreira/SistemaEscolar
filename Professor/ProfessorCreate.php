@@ -7,6 +7,9 @@ if($_POST){
         echo "<script> location.href='Professor.php';</script>";
     }
 
+}else{
+    $page="sala";
+    include("../php/read.php");
 }
 ?>
 
@@ -28,9 +31,9 @@ if($_POST){
                     <option value="">Selecione</option>
                 </optgroup>
                 <optgroup label="Todos">
-                    <option value="Turma A">Turma A</option>
-                    <option value="Turma B">Turma B</option>
-                    <option value="Turma C">Turma C</option>
+                    <?php while($dado = $read->fetch_array()){?>
+                        <option value="<?php echo $dado['idSala'];?>"><?php echo $dado['nomeSala'];?></option>
+                    <?php }?>
                 </optgroup>
             </select>
         </div>

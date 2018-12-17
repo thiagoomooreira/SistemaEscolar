@@ -7,6 +7,9 @@ if($_POST){
         echo "<script> location.href='Aluno.php';</script>";
     }
 
+}else{
+    $page="sala";
+    include("../php/read.php");
 }
 ?>
 
@@ -23,14 +26,14 @@ if($_POST){
         </div>
         <div class="input-field col s10 row">
             <i class="material-icons prefix">school</i>
-            <select name="serie" value="">
+            <select name="turma" value="">
                 <optgroup label="Atual">
                     <option value="">Selecione</option>
                 </optgroup>
                 <optgroup label="Todos">
-                    <option value="1° Semestre">1° Semestre</option>
-                    <option value="2° Semestre">2° Semestre</option>
-                    <option value="3° Semestre">3° Semestre</option>
+                    <?php while($dado = $read->fetch_array()){?>
+                        <option value="<?php echo $dado['idSala'];?>"><?php echo $dado['nomeSala'];?></option>
+                    <?php }?>
                 </optgroup>
             </select>
         </div>

@@ -2,6 +2,9 @@
 $page = "professor";
 include("../php/edit.php");
 
+$page = "sala" ;
+include("../php/read.php");
+
 if($queryValida){
     echo ("<script>location.href='Professor.php'</script>");
 }
@@ -23,12 +26,12 @@ if($queryValida){
             <i class="material-icons prefix">school</i>
             <select name="turma" value="">
                 <optgroup label="Atual">
-                    <option value="<?php echo($dado['turma']); ?>"><?php if($dado['turma']!=null){echo($dado['turma']);}else{echo("Selecione");}?></option>
+                    <option value="<?php echo($dado['idSala']); ?>"><?php echo($dado['nomeSala']); ?></option>
                 </optgroup>
                 <optgroup label="Todos">
-                    <option value="Turma A">Turma A</option>
-                    <option value="Turma B">Turma B</option>
-                    <option value="Turma C">Turma C</option>
+                    <?php while($salas = $read->fetch_array()){?>
+                        <option value="<?php echo $salas['idSala'];?>"><?php echo $salas['nomeSala'];?></option>
+                    <?php }?>
                 </optgroup>
             </select>
         </div>

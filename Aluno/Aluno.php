@@ -16,7 +16,7 @@ include("../php/read.php");
             <thead>
                 <tr>
                     <th class="s12 m4">NOME</th>
-                    <th class="s12 m4">SÉRIE</th>
+                    <th class="s12 m4">TURMA</th>
                     <th class="s12 m4">EDITAR</th>
                     <th class="s12 m4">DELETAR</th>
                 </tr>
@@ -26,7 +26,7 @@ include("../php/read.php");
                 <?php while ($dado = $read->fetch_array()){?>
                 <tr>
                     <td><?php echo $dado["nome"];?></td>
-                    <td><?php  echo $dado["serie"];?></td>
+                    <td><?php  echo $dado["nomeSala"];?></td>
                     <td>
                         <a class="waves-effect modal-trigger btn grey darken-3" href="AlunoEdit.php?id=<?= $dado['id']?>"><i class="material-icons prefix">create</i></a>
                     </td>
