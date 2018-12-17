@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 13-Dez-2018 às 16:44
+-- Generation Time: 17-Dez-2018 às 14:02
 -- Versão do servidor: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -32,19 +32,22 @@ DROP TABLE IF EXISTS `aluno`;
 CREATE TABLE IF NOT EXISTS `aluno` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
-  `serie` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6740 DEFAULT CHARSET=latin1;
+  `turmaAluno` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `turma` (`turmaAluno`)
+) ENGINE=MyISAM AUTO_INCREMENT=6748 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `aluno`
 --
 
-INSERT INTO `aluno` (`id`, `nome`, `serie`) VALUES
-(6739, 'Edivaldo Moreira da Silva', '1Â° Semestre'),
-(2, 'Aline Moreira', '3Â° Semestre'),
-(6737, 'Eli Gabilon', '3Â° Semestre'),
-(6723, 'Thiago Moreira Santos', '2Â° Semestre');
+INSERT INTO `aluno` (`id`, `nome`, `turmaAluno`) VALUES
+(6739, 'Edivaldo Moreira da Silva', '2'),
+(2, 'Aline Moreira', '1'),
+(6737, 'Eli Gabilon', '1'),
+(6723, 'Thiago Moreira Santos', '1'),
+(6740, 'Frata', '1'),
+(6746, 'Frutinha', '1');
 
 -- --------------------------------------------------------
 
@@ -56,18 +59,42 @@ DROP TABLE IF EXISTS `professor`;
 CREATE TABLE IF NOT EXISTS `professor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
-  `turma` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `turmaProfessor` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `turma` (`turmaProfessor`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `professor`
 --
 
-INSERT INTO `professor` (`id`, `nome`, `turma`) VALUES
-(3, 'KÃ¡tia', 'Turma B'),
-(2, 'Carolina', 'Turma A'),
-(4, 'Irineu Perreira', 'Turma C');
+INSERT INTO `professor` (`id`, `nome`, `turmaProfessor`) VALUES
+(3, 'CÃ¡tia', '2'),
+(2, 'Carolina', '1'),
+(4, 'Irineu Perreira', '1'),
+(9, 'TT', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `sala`
+--
+
+DROP TABLE IF EXISTS `sala`;
+CREATE TABLE IF NOT EXISTS `sala` (
+  `idSala` int(20) NOT NULL AUTO_INCREMENT,
+  `nomeSala` varchar(100) NOT NULL,
+  `capacidade` int(10) NOT NULL,
+  PRIMARY KEY (`idSala`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `sala`
+--
+
+INSERT INTO `sala` (`idSala`, `nomeSala`, `capacidade`) VALUES
+(1, 'Turma A', 5),
+(2, 'Turma B', 10);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
