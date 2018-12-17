@@ -27,7 +27,7 @@
                 <span class="card-title">Salas</span>
             </div>
             <div class="card-action">
-                <a href="#">Acessar</a>
+                <a href="<?php echo("$Url")?>/SistemaEscolar/Sala/Sala.php">Acessar</a>
             </div>
         </div>
     </div>

@@ -22,7 +22,7 @@ include("Url.php");
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="<?php echo("$Url")?>/SistemaEscolar/Aluno/Aluno.php">Alunos</a></li>
             <li><a href="<?php echo("$Url")?>/SistemaEscolar/Professor/Professor.php">Professor</a></li>
-            <li><a href="#">Salas</a></li>
+            <li><a href="<?php echo("$Url")?>/SistemaEscolar/Sala/Sala.php">Salas</a></li>
         </ul>
     </div>
 </nav>
