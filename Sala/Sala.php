@@ -10,7 +10,7 @@ include("../php/read.php");
     <div class="div-lista ">
         <div class="row">
             <h3 class="center s4">Salas</h3>
-            <legend><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="AlunoCreate.php"><i class="material-icons">add</i></a></legend>
+            <legend><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="SalaCreate.php"><i class="material-icons">add</i></a></legend>
 
         </div>
         <div class="row transparent">
@@ -30,10 +30,10 @@ include("../php/read.php");
                         <td><?php echo $dado["nomeSala"];?></td>
                         <td><?php  echo ("<p>$dado[capacidadeAtual] / $dado[capacidadeTotal] </p>");?></td>
                         <td>
-                            <a class="waves-effect modal-trigger btn grey darken-3" href="AlunoEdit.php?id=<?= $dado['idSala']?>"><i class="material-icons prefix">create</i></a>
+                            <a class="waves-effect modal-trigger btn grey darken-3" href="SalaEdit.php?id=<?= $dado['idSala']?>"><i class="material-icons prefix">create</i></a>
                         </td>
                         <td>
-                            <a class="waves-effect modal-trigger btn red darken-2" href="../php/delete.php?id=<?= $dado['idSala']?>&page=aluno"><i class="material-icons prefix">delete</i></a>
+                            <a class="waves-effect modal-trigger btn red darken-2" href="../php/delete.php?id=<?= $dado['idSala']?>&page=sala&capacidadeAtual=<?=$dado['capacidadeAtual']?>"><i class="material-icons prefix">delete</i></a>
                         </td>
                     </tr>
                 <?php }?>

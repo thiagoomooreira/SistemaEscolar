@@ -17,6 +17,11 @@ if($page == "professor"){
     $update = $conn->query("UPDATE sala SET capacidadeAtual = '$capacidade' WHERE idSala = '$turma'")or die($mysqli->error);
 
 
+}elseif($page == "sala"){
+    $nome = $_POST['nome'];
+    $capacidadeAtual = $_POST['capacidadeAtual'];
+    $capacidadeTotal = $_POST['capacidadeTotal'];
+    $query = "INSERT INTO sala (nomeSala,capacidadeAtual,capacidadeTotal)   VALUES ('$nome','$capacidadeAtual','$capacidadeTotal')";
 }
 
 $create = $conn->query($query) or die($mysqli->error);

@@ -12,8 +12,7 @@ include("Url.php");
     <link rel="stylesheet" href="<?php echo("$Url")?>/SistemaEscolar/Arquivos/css/estilo.css">
 
 
-
-    <title>Escola</title>
+    <title>Universidade</title>
 </head>
 <body>
 <nav>
