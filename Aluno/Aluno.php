@@ -8,7 +8,8 @@ include("../php/read.php");
 
 <div class="div-lista ">
     <div class="row">
-        <legend><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="AlunoCreate.php"><i class="material-icons">add</i></a></legend>
+        <h3 class="center s4">Alunos</h3>
+        <legend class="s8"><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="AlunoCreate.php"><i class="material-icons">add</i></a></legend>
 
     </div>
     <div class="row transparent">
@@ -16,7 +17,7 @@ include("../php/read.php");
             <thead>
                 <tr>
                     <th class="s12 m4">NOME</th>
-                    <th class="s12 m4">TURMA</th>
+                    <th class="s12 m4">SALA</th>
                     <th class="s12 m4">EDITAR</th>
                     <th class="s12 m4">DELETAR</th>
                 </tr>

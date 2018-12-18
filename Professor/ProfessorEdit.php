@@ -14,6 +14,7 @@ if($queryValida){
 <?php include("../Head.php"); ?>
 
 <div class="row box grey lighten-3">
+    <h4 class="center s4">Professor</h4>
     <form class="col s12" method="post">
         <div class="row">
             <div class="input-field col s10">

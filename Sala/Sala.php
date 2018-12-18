@@ -9,6 +9,7 @@ include("../php/read.php");
 
     <div class="div-lista ">
         <div class="row">
+            <h3 class="center s4">Salas</h3>
             <legend><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="AlunoCreate.php"><i class="material-icons">add</i></a></legend>
 
         </div>

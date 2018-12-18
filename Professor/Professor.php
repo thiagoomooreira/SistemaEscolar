@@ -7,15 +7,15 @@ include("../php/read.php");
 
 <div class="div-lista ">
     <div class="row">
+        <h3 class="center s4">Professor</h3>
         <legend><a class="amber accent-3 s12 m6 btn-floating btn-large waves-effect waves-light" href="ProfessorCreate.php"><i class="material-icons">add</i></a></legend>
-
     </div>
     <div class="row transparent">
         <table class="table-lista highlight">
             <thead>
             <tr>
                 <th class="s12 m4">NOME</th>
-                <th class="s12 m4">TURMA</th>
+                <th class="s12 m4">SALA</th>
                 <th class="s12 m4">EDITAR</th>
                 <th class="s12 m4">DELETAR</th>
             </tr>
