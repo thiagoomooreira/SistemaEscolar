@@ -6,7 +6,7 @@ include("Url.php");
     <!-- Materialize -->
     <link rel="stylesheet" href="<?php echo("$Url")?>/SistemaEscolar/materialize/css/materialize.min.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="<?php echo("$Url")?>/SistemaEscolar/Arquivos/icon/icon.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo("$Url")?>/SistemaEscolar/Arquivos/css/estilo.css">
