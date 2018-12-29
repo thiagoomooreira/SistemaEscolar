@@ -11,6 +11,7 @@ include("Url.php");
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo("$Url")?>/SistemaEscolar/Arquivos/css/estilo.css">
 
+    <link rel="icon" href="<?php echo("$Url")?>/SistemaEscolar/Arquivos/icon/book.ico" type="image/x-icon">
 
     <title>Universidade</title>
 </head>
